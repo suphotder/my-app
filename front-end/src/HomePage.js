@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ScanPage from "./ScanPage";
-import { BackButton, Page, Toolbar } from "react-onsenui";
+import { Page, Toolbar } from "react-onsenui";
 import youtube from "./images/youtube.png";
 import qrcode from "./images/qr-code.png";
 import "./HomePage.css";
