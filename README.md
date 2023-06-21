@@ -5,6 +5,14 @@ Build React project
 ```bash
 my-app$ cd front-end
 
+front-end$ yarn start
+```
+
+Build React project
+
+```bash
+my-app$ cd front-end
+
 front-end$ yarn install
 
 front-end$ yarn build
