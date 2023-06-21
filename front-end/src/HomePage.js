@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ScanPage from "./ScanPage";
-import { Page } from "react-onsenui";
+import { BackButton, Page, Toolbar } from "react-onsenui";
+import youtube from "./images/youtube.png";
+import qrcode from "./images/qr-code.png";
 import "./HomePage.css";
 
 function HomePage(props) {
@@ -33,14 +35,34 @@ function HomePage(props) {
   };
 
   return (
-    <Page>
+    <Page
+      renderToolbar={() => (
+        <Toolbar>
+          <div className="box-toolbar">
+            <BackButton />
+          </div>
+        </Toolbar>
+      )}
+    >
       <div className="container">
         <div>
-          <button onClick={openYouTube}>YouTube</button>
-        </div>
-        <div>
-          <button onClick={openScan}>Scan</button>
-          <div>URL:{scanURL}</div>
+          <div style={{ padding: "12px" }}>
+            <img
+              onClick={openYouTube}
+              src={youtube}
+              style={{ width: "48px", height: "48px" }}
+              alt="Logo"
+            />
+          </div>
+          <div style={{ padding: "12px" }}>
+            <img
+              onClick={openScan}
+              src={qrcode}
+              style={{ width: "48px", height: "48px" }}
+              alt="Logo"
+            />
+            <div>{scanURL}</div>
+          </div>
         </div>
       </div>
     </Page>

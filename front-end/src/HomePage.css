@@ -1,6 +1,15 @@
+.box-toolbar {
+  height: 56px;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
 .container {
   background-color: white;
   height: 100%;
   width: 100%;
   position: absolute;
+  display: flex;
+  justify-content: center;
 }
