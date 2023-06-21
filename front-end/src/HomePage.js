@@ -39,14 +39,14 @@ function HomePage(props) {
       renderToolbar={() => (
         <Toolbar>
           <div className="box-toolbar">
-            <BackButton />
+            <div style={{ paddingLeft: "8px", color: "white" }}>Home</div>
           </div>
         </Toolbar>
       )}
     >
       <div className="container">
         <div>
-          <div style={{ padding: "12px" }}>
+          <div className="box-row">
             <img
               onClick={openYouTube}
               src={youtube}
@@ -54,15 +54,15 @@ function HomePage(props) {
               alt="Logo"
             />
           </div>
-          <div style={{ padding: "12px" }}>
+          <div className="box-row">
             <img
               onClick={openScan}
               src={qrcode}
               style={{ width: "48px", height: "48px" }}
               alt="Logo"
             />
-            <div>{scanURL}</div>
           </div>
+          <p>{scanURL}</p>
         </div>
       </div>
     </Page>
